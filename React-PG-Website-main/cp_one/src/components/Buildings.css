@@ -1,0 +1,364 @@
+h2 {
+    margin-bottom: 10px !important; /* Reduce the bottom margin */
+  }
+  /* Header styles */
+  .app-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background-color: #2d2d2d;
+      padding: 0.5rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+    }
+    
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    
+    .logo {
+      width: 40px;
+      height: 40px;
+      background-color: #3b82f6;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    nav {
+      display: flex;
+      gap: 1rem;
+      height: 30px;
+    }
+    
+    nav button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.2rem 1rem;
+      background-color: #3b82f6;
+      border: none;
+      border-radius: 0.5rem;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    nav button:hover {
+      background-color: #2563eb;
+    }
+    
+    /* Main content styles */
+    .main-content {
+      padding: 4rem 2rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+    
+    /* Buildings styles */
+    .buildings-container {
+      display: flex;
+      justify-content:space-evenly;
+      gap: 2rem;
+      transition: all 0.3s ease;
+    }
+    
+    .buildings-small {
+      width: 30%;
+    }
+    
+    .building-card {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    
+    .building-image {
+      position: relative;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+    
+    .building-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .building-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 1rem;
+      background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    }
+    .building-overlay h3 {
+      color: white !important; /* Ensures text is always visible */
+      font-size: 1.2rem; /* Adjust font size for better readability */
+      font-weight: bold; /* Make the text stand out */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for better contrast */
+  }
+    
+    .view-rooms-btn {
+      padding: 0.75rem;
+      background-color: #3b82f6;
+      border: none;
+      border-radius: 0.5rem;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      white-space: nowrap; /* Ensures text stays in one line */
+      overflow: hidden; /* Prevents text from overflowing */
+      text-overflow: ellipsis; /* Adds "..." if text overflows */
+      width: max-content; /* Adjusts button width to fit text */
+      display: block; /* Ensures proper alignment */
+      text-align: center; /* Centers text */
+  }
+  
+    
+    .view-rooms-btn:hover {
+      background-color: #2563eb;
+    }
+    
+    /* Rooms styles */
+    .rooms-container {
+     display: flex;
+     align-items: center;
+     justify-content:space-between;
+     gap: 25px;
+     margin : 25px 10px;
+    }
+    
+    .room-card {
+      /* position: relative; */
+      border-radius: 0.5rem;
+      overflow: hidden;
+      cursor: pointer;
+      padding: 0px;
+    }
+    
+    .room-image {
+      position: relative;
+      height: 350px;
+      width:500px
+    }
+    
+    .room-image img {
+      /* left:10px; */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .room-overlay {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+      color: white;
+      font-size: 16px;
+      text-align: center;
+      padding: 5px 0;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+    
+    /* Ensure text is readable and scales properly on mobile */
+    @media (max-width: 768px) {
+      .room-overlay {
+        font-size: 14px; /* Slightly smaller text on mobile */
+        padding: 8px 0;
+      }
+    }
+    
+    .room-overlay h4 {
+      color: white !important; /* Ensures text is always visible */
+      font-size: 1rem; /* Adjust font size for better readability */
+      font-weight: bold; /* Make the text stand out */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for better contrast */
+  }
+  
+  
+    /* Hover effects */
+    .building-card:hover .building-image img,
+    .room-card:hover .room-image img {
+      transform: scale(1.05);
+    }
+    
+    /* Responsive design */
+    @media (max-width: 1024px) {
+      .buildings-container {
+        flex-direction: column;
+      }
+    
+      .buildings-small {
+        width: 100%;
+      }
+    
+      .rooms-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .app-header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+      }
+    
+      nav {
+        width: 100%;
+        justify-content: center;
+      }
+    
+      .main-content {
+        padding-top: rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      nav {
+        flex-direction: column;
+      }
+    
+      nav button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  
+    :root {
+      font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+      line-height: 1.5;
+      font-weight: 400;
+    
+      color-scheme: light dark;
+      color: rgba(255, 255, 255, 0.87);
+      background-color: #242424;
+    
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    a {
+      font-weight: 500;
+      color: #646cff;
+      text-decoration: inherit;
+    }
+    a:hover {
+      color: #535bf2;
+    } */
+    
+    body {
+      margin: 0;
+      display: flex;
+      place-items: center;
+      min-width: 320px;
+      min-height: 100vh;
+    }
+    
+  
+    /* ✅ Responsive Room Layout */
+  .rooms-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+    padding: 20px;
+    justify-content: center;
+  }
+  
+  .room-card {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .room-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .room-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  /* ✅ Responsive Adjustments */
+  @media (max-width: 1024px) {
+    .rooms-container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .rooms-container {
+        grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .room-overlay {
+      font-size: 14px;
+      padding: 8px 0;
+      text-align: center;
+    }
+  
+    .room-overlay h4 {
+      margin: 0;
+      font-size: 14px;
+      font-weight: bold;
+      text-align:left;
+      padding: 5px;
+    }
+  }
+  
+
+  /* ✅ Ensuring vertical room layout for specified dimensions */
+@media screen and (max-width: 1300px) and (min-width: 820px) {
+  .rooms-container {
+      display: flex;
+      flex-direction: column; /* Stack rooms vertically */
+      align-items: center; /* Center the content */
+      gap: 20px; /* Add spacing between rooms */
+  }
+
+  .room-card {
+      width: 100%; /* Ensures full width */
+      max-width: 500px; /* Prevents it from being too wide */
+  }
+
+  .room-image {
+      height: auto; /* Maintain aspect ratio */
+      max-height: 500px; /* Adjust height to fit */
+  }
+}
+

@@ -1,0 +1,123 @@
+.heading {
+    text-align: center;
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+/* Container for the amenities section using grid for 4 items per row */
+.amenities-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.0rem;
+    grid-row-gap: 3rem;
+    padding: 2rem 9rem;
+    justify-items: center;
+  }
+  
+  /* Each amenity item styled as a clickable link */
+  .amenity-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Icon box styling to mimic a card/tile look */
+  .icon-box {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .icon-box:hover {
+    background-color: #4a90e2;
+    transform: translateY(-5px);
+    box-shadow: #4a90e2 0 2px 4px;
+    caret-color: #fff;
+  }
+
+  /* Icon styling */
+  .icon-box i {
+    font-size: 2rem;
+    color: #4a90e2;
+  }
+
+  .icon-box:hover i {
+    color: #fff;
+  }
+  
+  /* Amenity label styling */
+  .amenity-label {
+    font-size: 1rem;
+    color: #4a90e2;
+    text-align: center;
+    line-height: 1.2;
+    font-weight: bold;
+  }
+
+  /* ✅ Responsive Amenities Section */
+  .amenities-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); /* Increased column width */
+    gap: 30px; /* Increased gap */
+    justify-content: center;
+    text-align: center;
+    padding: 30px; /* Increased padding */
+  }
+  
+  .amenity {
+    background: white;
+    padding: 20px; /* Increased padding */
+    border-radius: 12px; /* Slightly larger border radius */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .amenity:hover {
+    transform: scale(1.05); /* Slight hover effect */
+  }
+  
+  .amenity img {
+    width: 70px; /* Increased icon size */
+    height: 70px;
+  }
+  
+  .amenity p {
+    margin-top: 10px;
+    font-size: 18px; /* Increased text size */
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Responsive Grid */
+  @media (min-width: 1200px) {
+    .amenities-container {
+      grid-template-columns: repeat(4, 1fr); /* 4 icons per row */
+    }
+  }
+  
+  @media (max-width: 1199px) {
+    .amenities-container {
+      grid-template-columns: repeat(3, 1fr); /* 3 icons per row */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .amenities-container {
+      grid-template-columns: repeat(2, 1fr); /* 2 icons per row */
+    }
+  }
+  

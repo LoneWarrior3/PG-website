@@ -1,0 +1,59 @@
+.menu-container {
+  text-align: center;
+  margin: 20px auto;
+  max-width: 80%;
+}
+
+.menu-title {
+  color: #4A90E2;
+  font-size: 28px; /* Reduced from 28px */
+  font-weight: bold;
+  margin-bottom: 45px; /* Reduced space */
+  padding: 20px;
+}
+
+.menu-table {
+  width: 90%; /* Reduced from 80% */
+  height: auto; /* Adjust based on content */
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: white;
+}
+
+.menu-table th, .menu-table td {
+  border: 2px solid #4A90E2;
+  padding: 8px; /* Reduced from 12px */
+  text-align: center;
+  font-size: 16px; /* Reduced from 16px */
+  color: black;
+}
+
+.menu-table th {
+  background-color: #4A90E2;
+  color: white;
+  font-weight: bold;
+  font-size: 14px; /* Reduced font size */
+}
+
+.day-cell {
+  background-color: #4A90E2;
+  color: white;
+  font-weight: bold;
+}
+
+.menu-table tr:hover {
+  background-color: #f0f8ff;
+  transition: 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-table {
+    width: 90%; /* Adjusts for smaller screens */
+  }
+  
+  .menu-table th, .menu-table td {
+    font-size: 12px; /* Further reduced for mobile */
+    padding: 6px;
+  }
+}

@@ -1,0 +1,147 @@
+.feedback-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Center vertically */
+    /* padding: 50px 20px; */
+    background-image: url('https://images.jdmagicbox.com/v2/comp/delhi/y7/011pxx11.xx11.220516165454.u4y7/catalogue/urban-decor-destination-kirti-nagar-delhi-furniture-manufacturers-13qs4dii9z.jpg'); /* Use the room image URL */
+    background-size: cover; /* Make the image cover the entire container */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    color: white; /* Ensure text stands out against the background */
+}
+
+
+.feedback-header {
+    text-align: center;
+    margin-bottom: 100px;     /* Adds spacing between the title and the slider */
+    background: rgba(243, 239, 239, 0.742);
+    padding: 5px 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.34);
+    height: 125px;   
+}
+
+.feedback-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+.feedback-subtitle {
+    font-size: 1.2rem;
+    color:#195d61; /* Lighter color for readability */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.feedback-slider-wrapper {
+    position: relative;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.feedback-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feedback-card-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.feedback-card {
+    background: rgba(243, 239, 239, 0.742); /* Dark background for readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.34);
+    text-align: center;
+    max-width: 300px;
+    height: 210px;
+    margin: 0 auto;
+}
+
+.feedback-icon-name {
+    display: flex;
+    /* justify-content: center; */
+}
+
+.feedback-icon {
+    margin-right: 15px;
+}
+
+.feedback-name {
+    font-size: 1.3rem;
+    /* font-weight: bold; */
+    color:#007bff;
+    margin-bottom: 10px;
+}
+
+.feedback-text {
+    font-size: 1rem;
+    font-style: italic;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #195d61; /* Lighter text color */
+    text-align: left;
+}
+
+
+/* Custom Arrow Styles */
+.custom-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 50%;
+    transition: background 0.3s ease-in-out;
+}
+
+.custom-arrow:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.custom-prev {
+    left: -50px;
+}
+
+.custom-next {
+    right: -50px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .feedback-slider-wrapper {
+        width: 90%;
+    }
+
+    .custom-prev {
+        left: -30px;
+    }
+
+    .custom-next {
+        right: -30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .feedback-title {
+        font-size: 1.8rem;
+    }
+
+    .feedback-subtitle {
+        font-size: 1rem;
+    }
+
+    .custom-prev,
+    .custom-next {
+        display: none; /* Hides arrows for mobile */
+    }
+}
