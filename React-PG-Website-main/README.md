@@ -1,6 +1,6 @@
 # React-PG-Website
 
-A modern and responsive PG (Paying Guest) hostel showcase website built using React and Bootstrap. The website features an interactive UI for users to explore different PG accommodations, view amenities, and check room availability.
+A modern and a responsive PG (Paying Guest) hostel showcase website built using React and Bootstrap. The website features an interactive UI for users to explore different PG accommodations, view amenities, and check room availability.
 
 ## 🚀 Features
 
